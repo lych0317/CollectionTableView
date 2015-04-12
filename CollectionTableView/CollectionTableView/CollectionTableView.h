@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionTableViewCell.h"
 
-@class CollectionTableView;
+@class CollectionTableView, CollectionTableViewCell;
 
 @protocol CollectionTableViewDelegate <UITableViewDelegate>
 
@@ -24,7 +25,7 @@
 
 - (NSInteger)collectionTableView:(CollectionTableView *)tableView numberOfItemsInSection:(NSInteger)section;
 
-- (UICollectionViewCell *)collectionTableView:(CollectionTableView *)tableView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+- (CollectionTableViewCell *)collectionTableView:(CollectionTableView *)tableView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 - (UIView *)collectionTableView:(CollectionTableView *)tableView leftViewAtIndexPath:(NSIndexPath *)indexPath;
 

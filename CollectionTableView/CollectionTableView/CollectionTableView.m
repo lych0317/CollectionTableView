@@ -70,14 +70,20 @@
         CGFloat itemStep = (collectionFrame.size.width - columnContainNumber * itemSize.width) / (columnContainNumber - 1);
         NSInteger rowNumber =(itemNumber - 1) / columnContainNumber + 1;
         for (int row = 0; row < rowNumber; row++) {
-            NSInteger columnNumber = 0;// = ;
+            NSInteger columnNumber = 0;
             if (itemNumber - columnContainNumber * row > columnContainNumber) {
                 columnNumber = columnContainNumber;
             } else {
                 columnNumber = itemNumber - columnContainNumber * row;
             }
             for (int column = 0; column < columnNumber; column++) {
-                UICollectionViewCell *collectionCell = [self cellForItemAtIndexPath:indexPath];
+                indexPath = [NSIndexPath indexPathForItem:row * columnContainNumber + column inSection:indexPath.section];
+                CollectionTableViewCell *collectionCell = [self cellForItemAtIndexPath:indexPath];
+                collectionCell.didSelectedCell = ^(void) {
+                    if ([self.collectionDelegate respondsToSelector:@selector(collectionTableView:didSelectItemAtIndexPath:)]) {
+                        [self.collectionDelegate collectionTableView:self didSelectItemAtIndexPath:indexPath];
+                    }
+                };
                 UIView *leftView = [self leftViewAtIndexPath:indexPath];
                 if (leftView) {
                     leftView.frame = CGRectMake(0, 0, edgeInset.left, cellHeight);
@@ -122,7 +128,7 @@
     return 0;
 }
 
-- (UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CollectionTableViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.collectionDataSource respondsToSelector:@selector(collectionTableView:cellForItemAtIndexPath:)]) {
         return [self.collectionDataSource collectionTableView:self cellForItemAtIndexPath:indexPath];
     }

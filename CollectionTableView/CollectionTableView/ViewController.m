@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CollectionTableView.h"
+#import "CollectionTableViewCell.h"
 
 @interface ViewController () <CollectionTableViewDelegate, CollectionTableViewDataSource>
 
@@ -46,7 +47,7 @@
 #pragma mark - CollectionTableViewDelegate
 
 - (void)collectionTableView:(CollectionTableView *)tableView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    NSLog(@"index path section : %d, row : %d", indexPath.section, indexPath.row);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -98,8 +99,10 @@
     return array.count;
 }
 
-- (UICollectionViewCell *)collectionTableView:(CollectionTableView *)tableView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
+- (CollectionTableViewCell *)collectionTableView:(CollectionTableView *)tableView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"index path section : %d, row : %d", indexPath.section, indexPath.row);
+
+    CollectionTableViewCell *cell = [[CollectionTableViewCell alloc] init];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     NSArray *array = self.cellDataArray[indexPath.section];
 

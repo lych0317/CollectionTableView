@@ -28,6 +28,7 @@
 		8346CAF61AD7B22E006982E0 /* image_2_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8346CAEF1AD7B22E006982E0 /* image_2_2@2x.png */; };
 		8346CAF71AD7B22E006982E0 /* image_2_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8346CAF01AD7B22E006982E0 /* image_2_3@2x.png */; };
 		8346CAF81AD7B22E006982E0 /* image_3_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8346CAF11AD7B22E006982E0 /* image_3_0@2x.png */; };
+		8346CB011AD7E8ED006982E0 /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8346CB001AD7E8ED006982E0 /* CollectionTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		8346CAEF1AD7B22E006982E0 /* image_2_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_2_2@2x.png"; sourceTree = "<group>"; };
 		8346CAF01AD7B22E006982E0 /* image_2_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_2_3@2x.png"; sourceTree = "<group>"; };
 		8346CAF11AD7B22E006982E0 /* image_3_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_3_0@2x.png"; sourceTree = "<group>"; };
+		8346CAFF1AD7E8ED006982E0 /* CollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewCell.h; path = CollectionTableView/CollectionTableViewCell.h; sourceTree = "<group>"; };
+		8346CB001AD7E8ED006982E0 /* CollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewCell.m; path = CollectionTableView/CollectionTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				8346CADE1AD790A9006982E0 /* UIView+Coordinate.m */,
 				8346CADA1AD6ADAB006982E0 /* CollectionTableView.h */,
 				8346CADB1AD6ADAB006982E0 /* CollectionTableView.m */,
+				8346CAFF1AD7E8ED006982E0 /* CollectionTableViewCell.h */,
+				8346CB001AD7E8ED006982E0 /* CollectionTableViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8346CABC1AD6AD4A006982E0 /* ViewController.m in Sources */,
+				8346CB011AD7E8ED006982E0 /* CollectionTableViewCell.m in Sources */,
 				8346CAB91AD6AD4A006982E0 /* AppDelegate.m in Sources */,
 				8346CAB61AD6AD4A006982E0 /* main.m in Sources */,
 				8346CADC1AD6ADAB006982E0 /* CollectionTableView.m in Sources */,
